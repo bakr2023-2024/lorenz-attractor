@@ -19,6 +19,7 @@ int main(int argc, char **argv)
     camera.fovy = 60.0f;
     camera.projection = CAMERA_PERSPECTIVE;
     InitWindow(sw, sh, "Lorenz Attractor");
+    SetTraceLogLevel(LOG_NONE);
     SetTargetFPS(fps);
     float dt = 1.0 / fps;
     Vector3 pos{1, 1, 1};
@@ -36,7 +37,6 @@ int main(int argc, char **argv)
         points.emplace_back(pos.x, pos.y, pos.z);
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawFPS(10, 10);
         BeginMode3D(camera);
         for (int i = 1; i < points.size(); i++)
         {
