@@ -1,8 +1,15 @@
 #include <raylib.h>
 #include <vector>
+#include <string>
 int main(int argc, char **argv)
 {
     float sigma = 10.0f, rho = 28.0f, beta = 8.0 / 3.0f;
+    if (argc == 2)
+        sigma = std::stof(argv[1]);
+    if (argc == 3)
+        rho = std::stof(argv[2]);
+    if (argc == 4)
+        beta = std::stof(argv[3]);
     int fps = 90;
     int sw = 960, sh = 720;
     Camera3D camera{0};
