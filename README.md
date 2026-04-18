@@ -52,3 +52,4 @@ Examples:
 | Input           | Action        |
 | --------------- | ------------- |
 | Scroll wheel    | Zoom in / out |
+| Drag mouse      | Rotate camera |
